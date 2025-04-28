@@ -1,0 +1,188 @@
+/* User.css */
+
+/* Container with subtle gradient */
+.user-container {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #ececec 0%, #f9f9f9 100%);
+    padding: 30px;
+    min-height: 100vh;
+  }
+  
+  /* Header area */
+  .user-header {
+    position: relative;
+    background: #f1f1f1;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  
+  /* Enhanced heading */
+  .user-header .p-header {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin: 0;
+    padding-bottom: 10px;
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  /* Decorative underline */
+  .user-header .p-header::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background-color: #4CAF50;
+    border-radius: 2px;
+  }
+  
+  /* Matched Skills button */
+  .user-header .b-header {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 30px;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: background 0.3s;
+  }
+  
+  .user-header .b-header:hover {
+    background: #45a049;
+  }
+  
+  /* All users title */
+  .all-users-title {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* No users / loading text */
+  .no-users,
+  .loading {
+    text-align: center;
+    color: #666;
+    font-size: 1rem;
+  }
+  
+  /* Grid for user profiles: 2 per row */
+  .user-profiles {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+  
+  /* Card styling with 3D lift effect */
+  .user-profile {
+    background: #fafafa;
+    border-radius: 12px;
+    box-shadow:
+      0 10px 15px rgba(0, 0, 0, 0.05),
+      0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s, box-shadow 0.2s;
+    transform: translateZ(0);
+  }
+  
+  .user-profile:hover {
+    transform: translateY(-8px) translateZ(10px);
+    box-shadow:
+      0 20px 25px rgba(0, 0, 0, 0.1),
+      0 8px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* User info */
+  .user-info {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .user-name {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 8px;
+  }
+  
+  /* Darker email text */
+  .user-bio {
+    font-size: 0.9rem;
+    color: #333;
+    margin-bottom: 12px;
+  }
+  
+  /* Skills pills */
+  .skills-group {
+    margin-bottom: 8px;
+  }
+  
+  .skill-pill {
+    display: inline-block;
+    margin: 4px 6px 0 6px;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    color: #fff;
+  }
+  
+  .offer-pill {
+    background-color: #007bff;
+  }
+  
+  .want-pill {
+    background-color: #28a745;
+  }
+  
+  /* Action buttons */
+  .user-actions {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+  }
+  
+  .user-button {
+    flex: 1;
+    padding: 10px;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .user-button.primary {
+    background: #007bff;
+  }
+  
+  .user-button.primary:hover {
+    background: #0056b3;
+  }
+  
+  .user-button.secondary {
+    background: #6c757d;
+  }
+  
+  .user-button.secondary:hover {
+    background: #5a6268;
+  }
+  
