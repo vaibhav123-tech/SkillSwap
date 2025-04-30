@@ -24,6 +24,7 @@ const Login = () => {
 
             if (response.ok && data.success) {
                 navigate('/landing');
+                console.log('Login successful:', data);
                 
             } else {
                 alert(data.message || 'Wrong credentials');
