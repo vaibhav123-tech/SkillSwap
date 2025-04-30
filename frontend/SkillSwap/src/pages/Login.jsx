@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+/* eslint-disable no-unused-vars */
+import React, { useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Login.css'; // import your css file
 
@@ -23,6 +24,7 @@ const Login = () => {
 
             if (response.ok && data.success) {
                 navigate('/landing');
+                
             } else {
                 alert(data.message || 'Wrong credentials');
             }

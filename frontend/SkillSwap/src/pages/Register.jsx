@@ -28,7 +28,6 @@ const Register = () => {
             });
 
             if (response.ok) {
-                alert("Registration successful!");
                 navigate("/landing");
             } else {
                 const errorData = await response.json();

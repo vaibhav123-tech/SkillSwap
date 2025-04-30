@@ -12,20 +12,14 @@ const Landing = () => {
         <div style={styles.container}>
             <h1 style={styles.welcomeMessage}>Welcome to SkillSwap!</h1>
             <div style={styles.buttonContainer}>
-                <button style={styles.button} onClick={() => handleNavigation('/profile')}>
+                <button style={styles.button} onClick={() => handleNavigation('/home')}>
                     Go to Profile
-                </button>
-                <button style={styles.button} onClick={() => handleNavigation('/matched-users')}>
-                    Matched Users
                 </button>
                 <button style={styles.button} onClick={() => handleNavigation('/chat')}>
                     Chat
                 </button>
                 <button style={styles.button} onClick={() => handleNavigation('/video-call')}>
                     Video Call
-                </button>
-                <button style={styles.button} onClick={() => handleNavigation('/get-users')}>
-                    See All Users
                 </button>
             </div>
         </div>

@@ -3,11 +3,12 @@ const express  = require('express');
 const router   = express.Router();
 const mongoose = require('mongoose');
 const User     = require('../model/user_model');
+const AuthUser = require('../model/auth_user');
 
 router.post('/addUser', async (req, res) => {
-  const { name, email, offeredSkills, wantedSkills } = req.body;
+  const {name,email, offeredSkills, wantedSkills } = req.body;
   try {
-    const user = new User({ name, email, offeredSkills, wantedSkills });
+    const user = new User({name,email,offeredSkills, wantedSkills });
     await user.save();
     res.status(201).json({ message: 'User added successfully', user });
   } catch (err) {
@@ -63,7 +64,7 @@ router.get('/matchUsers/:id', async (req, res) => {
 router.post('/register', async (req, res) => {
   const { name, email, password } = req.body;
   try {
-    const user = new User({ name, email, password });
+    const user = new AuthUser({ name, email, password });
     await user.save();
     res.status(201).json({ message: 'User registered successfully', user });
   } catch (err) {
@@ -74,7 +75,7 @@ router.post('/register', async (req, res) => {
 router.post('/login', async (req, res) => {
   const { email, password } = req.body;
   try {
-    const user = await User.find({ email, password });
+    const user = await AuthUser.find({ email, password });
     if (user.length === 0) {
       return res.status(401).json({ message: 'Invalid email or password' });
     }
